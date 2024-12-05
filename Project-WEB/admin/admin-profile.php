@@ -1,15 +1,5 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 session_start();
 $id = $_SESSION['Admin_id'];
@@ -158,7 +148,7 @@ $id = $_SESSION['Admin_id'];
                             <td><a href=". $row['facebook'] . " target='_blank'><i class='fa-brands fa-facebook'></i> Facebook</a></td>
                             <td><a href=" . $row['instagram'] . " target='_blank'><i class='fa-brands fa-square-instagram'></i> Instagram</a></td>
                             <td><a href=" . $row['youtube'] . " target='_blank'><i class='fa-brands fa-youtube'></i> YouTube</a></td>
-                            <td><a href=" . $row['linkdin'] . " target='_blank'><i class='fa-brands fa-linkedin'></i> LinkedIn</a></td>
+                            <td><a href=" . $row['linkedin'] . " target='_blank'><i class='fa-brands fa-linkedin'></i> LinkedIn</a></td>
                             </tr>";
                         }
                     } 

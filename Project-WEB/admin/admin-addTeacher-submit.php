@@ -6,22 +6,12 @@ require 'C:\xampp\htdocs\Project-WEB\PHPMailer-master\src/Exception.php';
 require 'C:\xampp\htdocs\Project-WEB\PHPMailer-master\src/PHPMailer.php';
 require 'C:\xampp\htdocs\Project-WEB\PHPMailer-master\src/SMTP.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+include '../connection.php';
 //generate passwoard
 function generateSecurePassword($length = 8) {
   return bin2hex(random_bytes($length / 2));  // Generates random password of given length
 }
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 // Retrieve form data
 $name = $_POST['teacher_name'];
@@ -71,7 +61,7 @@ if ($conn->query($sql) === TRUE) {
         $mail->Body = "<h2>Hello $name,</h2><p>Thank you for choosing our institute!</p>";
 
         $mail->send();
-        echo "<script>alert('Admission successful! A confirmation email has been sent.'); window.location.href = 'admin-addTeacher.html';</script>";
+        echo "<script>alert('Admission successful! A confirmation email has been sent.'); window.location.href = 'admin-addTeacher.php';</script>";
     } 
     catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

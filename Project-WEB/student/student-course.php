@@ -1,15 +1,5 @@
 <?php
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 session_start();
 $student_id = $_SESSION['Std_id'];
@@ -119,7 +109,7 @@ if ($data->num_rows > 0) {
                             <td>" . $row['Course_Name'] . "</td>
                             <td>" . $row['Duration'] . "</td>
                             <td>" . $row['Fees'] . "</td>
-                            <td>" . $row['Matrial'] . "</td>
+                            <td>" . $row['Material'] . "</td>
                             <td>" . $row['Syllabus'] . "</td>
                             <td>" . $row['Start_date'] . "</td>
                             <td>" . $row['teacher_name'] . "</td>

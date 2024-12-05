@@ -6,19 +6,7 @@ require 'C:\xampp\htdocs\Project-WEB\PHPMailer-master\src/Exception.php';
 require 'C:\xampp\htdocs\Project-WEB\PHPMailer-master\src/PHPMailer.php';
 require 'C:\xampp\htdocs\Project-WEB\PHPMailer-master\src/SMTP.php';
 
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data"; // Your actual database name
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check if the connection was successful
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 // Generate password
 function generateSecurePassword($length = 8) {

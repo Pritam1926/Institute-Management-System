@@ -174,7 +174,7 @@
             <div class="quick">
                 <p class="bold">Quick Links</p>
                 <ul class="icon-logo">
-                    <li class="line-space"><a href="/Project-WEB/home.php" class="icon-link">Home</a></li>
+                    <li class="line-space"><a href="/Project-WEB/index.php" class="icon-link">Home</a></li>
                     <li class="line-space"><a href="/Project-WEB/course.php" class="icon-link">Course</a></li>
                     <li class="line-space"><a href="/Project-WEB/admission.php" class="icon-link">Admission</a></li>
                     <li class="line-space"><a href="/Project-WEB/about.php" class="icon-link">About Us</a></li>
@@ -188,7 +188,7 @@
         <section class="footer-copywrite">
             <img src="/Project-WEB/img/logo.jpg" alt="logo" class="main-logo">
             <h1 class="main-heading">Coder's Goal</h1>
-            <p id="copyright">&copy; 2024 Coder's Goal. <a href="/Project-WEB/home.php" class="icon-link">All Rights Reserved</a></p>
+            <p id="copyright">&copy; 2024 Coder's Goal. <a href="/Project-WEB/index.php" class="icon-link">All Rights Reserved</a></p>
         </section>
     </footer>
 </body>

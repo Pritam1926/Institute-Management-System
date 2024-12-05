@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 session_start();
 $admin_id = $_SESSION['Admin_id'];
@@ -155,7 +144,7 @@ $conn->close();
             </div>
             <div class="form-group">
                 <label for="linkedin">LinkedIn:</label>
-                <input type="text" id="linkedin" name="linkdin" value="<?php echo $row['linkdin']; ?>">
+                <input type="text" id="linkedin" name="linkdin" value="<?php echo $row['linkedin']; ?>">
             </div>
             <div class="form-group">
                 <button type="submit">Submit</button>

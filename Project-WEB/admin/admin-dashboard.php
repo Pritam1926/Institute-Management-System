@@ -11,18 +11,7 @@ header("Pragma: no-cache");
 header("Expires: -1");
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data";
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 // Total Students
 $sql = "SELECT COUNT(*) AS total_students FROM students_details";

@@ -11,18 +11,7 @@ header("Pragma: no-cache");
 header("Expires: -1");
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data";
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 // Assume student ID is stored in session after login
 $student_id = $_SESSION['Std_id'];
@@ -272,14 +261,14 @@ if ($result->num_rows > 0) {
                         </thead>
                         <tbody>
                             <?php 
-                            $sql= "SELECT title, marks, persentage, grade_date from grades where Course_name='$course' limit 2";
+                            $sql= "SELECT title, marks, percentage, grade_date from grades where Course_name='$course' limit 2";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) { 
                                 while ($row = $result->fetch_assoc()) { 
                                     echo "<tr> 
                                     <td>{$row['title']}</td> 
                                     <td>{$row['marks']}</td> 
-                                    <td>{$row['persentage']}</td> 
+                                    <td>{$row['percentage']}</td> 
                                     <td>{$row['grade_date']}</td> </tr>"; 
                                 } 
                             } 

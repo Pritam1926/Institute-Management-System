@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "institue_data"; // Your actual database name
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check if the connection was successful
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,7 +125,7 @@ if ($conn->connect_error) {
             </div>
             <div class="form-group">
                 <label for="material">Material:</label>
-                <input type="file" id="material" name="Matrial" accept=".pdf,.doc,.docx">
+                <input type="file" id="material" name="Material" accept=".pdf,.doc,.docx">
             </div>
             <div class="form-group">
                 <label for="teacher_name">Teacher Name:</label>

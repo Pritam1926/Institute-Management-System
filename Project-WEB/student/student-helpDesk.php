@@ -1,17 +1,5 @@
 <?php
-// Database connection details
-$servername = "localhost"; // Database host
-$username = "root"; // Database username
-$password = ""; // Database password (leave empty if no password is set)
-$dbname = "institue_data"; // Replace with your actual database name
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../connection.php';
 
 // Fetch help desk details from the admin table
 $sql = "SELECT Address, Ph_no, Email_id FROM admin_details LIMIT 1";

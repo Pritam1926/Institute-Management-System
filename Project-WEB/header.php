@@ -248,7 +248,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <!-- First Nav Bar -->
         <div class="top-nav">
             <div class="logo">
-                <a href="home.php"><img src="/Project-WEB/img/logo.jpg" alt="Institute Logo"></a>
+                <a href="index.php"><img src="/Project-WEB/img/logo.jpg" alt="Institute Logo"></a>
                 <span class="institute-name">Coder's Goal</span>
             </div>
             <div class="middle-nav">
@@ -265,7 +265,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <!-- Second Nav Bar -->
         <nav class="second-nav">
             <ul class="nav-list">
-                <li><a href="/Project-WEB/home.php" class="<?php if($currentPage == 'home.php') echo 'active'; ?>">Home</a></li>
+                <li><a href="/Project-WEB/index.php" class="<?php if($currentPage == 'index.php') echo 'active'; ?>">Home</a></li>
                 <li><a href="/Project-WEB/admission.php" class="<?php if($currentPage == 'admission.php') echo 'active'; ?>">Admission</a></li>
                 <li><a href="/Project-WEB/course.php" class="<?php if($currentPage == 'course.php') echo 'active'; ?>">Course</a></li>
                 <li><a href="/Project-WEB/faculty.php" class="<?php if($currentPage == 'faculty.php') echo 'active'; ?>">Faculty</a></li>
